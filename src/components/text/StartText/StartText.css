@@ -1,0 +1,20 @@
+.start-text--container {
+    margin-bottom: 45px;
+}
+
+.start-text--header {
+    margin: 0;
+
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    
+    line-height: 56px;
+    color: #293264;
+}
+
+.start-text--paragraph {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}

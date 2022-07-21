@@ -1,0 +1,12 @@
+.test-button {
+    width: 150px;
+    height: 45px;
+    margin-right: 15px;
+
+    box-sizing: border-box;
+    border: 1px solid #4D5B9E;
+    border-radius: 8px;
+
+    color: #293264;
+    background-color: #F5F7FB;
+}

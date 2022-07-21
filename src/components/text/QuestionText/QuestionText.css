@@ -1,0 +1,9 @@
+.question-text--header {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    margin: 0;
+
+    color: #293264;
+}
