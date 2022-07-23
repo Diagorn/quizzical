@@ -5,11 +5,15 @@ import StartButton from '../../components/buttons/StartButton/StartButton'
 
 export default function StartPage(props) {
     return (
-        <>
-            <StartText />
-            <StartButton 
-                handleClick={props.handleClick}
-            />
-        </>
+        <div className='App'>
+            <main>
+                <div className='content'>
+                    <StartText />
+                    <StartButton 
+                        handleClick={props.handleClick}
+                    />
+                </div>
+            </main>
+        </div>
     )
 }

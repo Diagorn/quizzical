@@ -1,6 +1,7 @@
 import './App.css';
 
 import React, { useState } from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import WelcomePage from './pages/WelcomePage/WelcomePage.js'
 import QuizPage from './pages/QuizPage/QuizPage.js';
 
@@ -13,20 +14,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <main>
-        <div className='content'>
-          {
-            startPage ? 
-              <WelcomePage
-                 handleClick={handleStartButtonClick}
-              /> : 
-              <QuizPage />
-          }
-        </div>
-      </main>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" index element={<WelcomePage />}/>
+        <Route path="/quiz" element={<QuizPage/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;

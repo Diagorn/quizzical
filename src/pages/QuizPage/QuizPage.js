@@ -12,6 +12,7 @@ export default function QuizPage() {
     const [solved, setSolved] = useState(false)
     
     useEffect(() => {
+        console.log('qwe')
         OtdbService.getQuestions(questionsQty)
             .then(response => {
                 setQuestions(response.data.results.map(result => {
@@ -52,16 +53,22 @@ export default function QuizPage() {
     })
 
     return (
-        <div className='quiz-container'>
-            <section>
-                {questionsMarkup}
-            </section>
-            <div className='solve'>
-                <SolveButton
-                    caption='Check answers'
-                    handleClick={handleSolveClick}
-                />
-            </div>
+        <div className='App'>
+            <main>
+                <div className='content'>
+                    <div className='quiz-container'>
+                        <section>
+                            {questionsMarkup}
+                        </section>
+                        <div className='solve'>
+                            <SolveButton
+                                caption='Check answers'
+                                handleClick={handleSolveClick}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     )
 }
