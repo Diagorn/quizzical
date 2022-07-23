@@ -6,15 +6,13 @@ export default function TestButton(props) {
 
     function getClasses() {
         if (props.solved) {
-            //if the user guessed correctly
-            if (props.answer.active && props.answer.correct) { 
-                console.log('right')
+            //Corrected guess
+            if (props.answer.correct) { 
                 return 'button test-button solved-right'
             }
 
             //if the user guessed wrong
             else if (props.answer.active && !props.answer.correct) {
-                console.log('wrong')
                 return 'button test-button solved-wrong'
             }
 
@@ -28,6 +26,7 @@ export default function TestButton(props) {
         }
     }
 
+    const classes = getClasses();
 
     return(
         <button 

@@ -17,8 +17,8 @@
 }
 
 .solved-neutral {
-    color: #4D5B9E;
-    border: 1px solid #4D5B9E;
+    color: #8f94af;
+    border: 1px solid #8f94af;
     background-color: transparent;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .solved-wrong {
-    color: #293264;
+    color: #8f94af;
     border: none;
     background-color: #F8BCBC;
 }
