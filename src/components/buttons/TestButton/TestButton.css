@@ -10,3 +10,26 @@
     color: #293264;
     background-color: #F5F7FB;
 }
+
+.active-test-button {
+    border: none;
+    background-color: #D6DBF5;
+}
+
+.solved-neutral {
+    color: #4D5B9E;
+    border: 1px solid #4D5B9E;
+    background-color: transparent;
+}
+
+.solved-right {
+    color: #293264;
+    border: none;
+    background-color: #94D7A2;
+}
+
+.solved-wrong {
+    color: #293264;
+    border: none;
+    background-color: #F8BCBC;
+}

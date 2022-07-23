@@ -15,24 +15,44 @@ export default function Question(props) {
         
         //adding the correct answer first
         answersArray.push({
+            id: 0,
             text: props.correctAnswer,
-            correct: true
+            correct: true,
+            active: false
         })
-
-        console.log(props.incorrectAnswers)
 
         //adding the rest incorrect answers
         for (let i = 0; i < props.incorrectAnswers.length; i++) {
             let answer = props.incorrectAnswers[i]
             answersArray.push({
+                id: i + 1,
                 text: answer,
-                correct: false
+                correct: false,
+                active: false
             })
         }
 
         //setting the answers in random order
         setAnswers(ArrayUtils.shuffle(answersArray))
     }, [props])
+
+    function handleClick(id) {
+        setAnswers(prevAnswers => {
+            return prevAnswers.map(answer => {
+                return answer.id !== id ?
+                    {
+                        ...answer,
+                        active: false
+                    } 
+                    :
+                    {
+                        ...answer,
+                        active: true
+                    }
+
+            })
+        })
+    }
 
     return (
         <section>
@@ -44,7 +64,10 @@ export default function Question(props) {
                     answers.map(answer => {
                         return <TestButton 
                             answer={answer}
-                            key={answer}
+                            key={answer.id}
+                            handleClick={() => handleClick(answer.id)}
+                            status={answer.status}
+                            solved={props.solved}
                         />
                     })
                 }
