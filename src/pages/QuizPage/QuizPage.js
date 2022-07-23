@@ -12,7 +12,6 @@ export default function QuizPage() {
     const [solved, setSolved] = useState(false)
     
     useEffect(() => {
-        console.log('qwe')
         OtdbService.getQuestions(questionsQty)
             .then(response => {
                 setQuestions(response.data.results.map(result => {
